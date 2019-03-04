@@ -1,0 +1,29 @@
+
+<div class="field">
+<%= form_with(model: @company) do |form| %>
+
+
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.submit %>
+
+
+<% end %>
+
+<br>
+<br>
+
+<h3>Listado de Companies</h3>
+
+<ul id='list'>
+  <% @companies.each do |post| %>
+  <li>
+    <%= company.name %>
+    <%= link_to 'Edit', edit_company_path(@companies), remote: true %>
+  </li>
+  <% end %>
+</ul>
+
+  </div>
+
+  <%= render 'modal-edit' %>

@@ -1,0 +1,5 @@
+<li id="<%= company.id %>">
+  <%= company.name %>
+  <%= link_to 'editar', edit_company_path(company.id), data: {remote: true } %>
+  <%= link_to 'show', company_path(company.id), data: {remote: true } %>
+</li>
